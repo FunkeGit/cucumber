@@ -1,0 +1,29 @@
+package TestFramework;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class MouseActions {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://trytestingthis.netlify.app/");
+		
+		WebElement dropdown=driver.findElement(By.id("option"));
+		
+		Select select=new Select(dropdown);
+		
+		select.selectByIndex(1);
+		
+		System.out.println("Done");
+		//Assertions.assertTrue(options3.isSelected());
+		// TODO Auto-generated method stub
+
+	}
+
+}
